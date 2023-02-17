@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "lib": ["deno.window"],
+        "allowJs": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "noImplicitAny": false,
+        "strict": true
+    }
+}

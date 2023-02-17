@@ -1,4 +1,9 @@
-Generate a self signed x509 certificate from node.js.
+Generate a self signed x509 certificate from Deno.
+
+## selfsignedeno
+
+This is an extremely minimal fork that only seeks to make [selfsigned](https://www.npmjs.com/package/selfsigned)
+compatible with Deno. Only strictly necessary changes will be made.
 
 ## Install
 
@@ -81,3 +86,9 @@ var pems = selfsigned.generate(null, { clientCertificate: true, clientCertificat
 ## License
 
 MIT
+
+## Thank you
+
+- José F. Romaniello <jfromaniello@gmail.com> (author)
+- Paolo Fragomeni <paolo@async.ly>
+- Charles Bushong <bushong1@gmail.com>

@@ -1,4 +1,10 @@
-var forge = require('node-forge');
+import forge from "npm:node-forge@^1.3";
+forge.options.usePureJavaScript = true; // Necessary since Deno doesn't reimplement node's crypto (yet)
+Deno.test("generate", () => {
+  generate([
+    { name: "commonName", value: "example.com" }
+  ]);
+});
 
 // a hexString is considered negative if it's most significant bit is 1
 // because serial numbers use ones' complement notation
@@ -37,7 +43,7 @@ function getAlgorithm(key) {
  * @param {function} [done] Optional callback, if not provided the generation is synchronous
  * @returns
  */
-exports.generate = function generate(attrs, options, done) {
+export function generate(attrs, options, done) {
   if (typeof attrs === 'function') {
     done = attrs;
     attrs = undefined;
